@@ -168,3 +168,32 @@ button:focus-visible {
     transform: none !important;
   }
 }
+
+
+/* --------------------------------------------------------------------------
+   8. Tool chips — lift and brighten, one at a time
+   -------------------------------------------------------------------------- */
+
+/* Adjust this selector list to match your markup */
+.stack li,
+.stack span,
+.chip,
+.tag,
+.pill {
+  display: inline-block;
+  transition: transform 260ms cubic-bezier(0.22, 0.61, 0.36, 1),
+              border-color 260ms ease,
+              color 260ms ease,
+              background-color 260ms ease;
+}
+
+.stack li:hover,
+.stack span:hover,
+.chip:hover,
+.tag:hover,
+.pill:hover {
+  transform: translateY(-2px);
+  border-color: currentColor;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.04);
+}
